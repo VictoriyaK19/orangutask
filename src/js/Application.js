@@ -19,13 +19,21 @@ export default class Application extends EventEmitter {
     const div = document.querySelector("#emojis");
     div.innerHTML = "";
     this.emojis.forEach(emoji => {
-      const emojiP = document.createElement("p")
+      const emojiP = document.createElement("p");
       emojiP.innerText = emoji;
-      div.appendChild(emojiP)
+      div.appendChild(emojiP);
     })
   }
 
   addBananas() {
+    const ptag = document.querySelectorAll("p");
+    const div = document.querySelector("#emojis");
     this.emojis = this.emojis.map(emoji => emoji + this.banana);
+    div.innerHTML = "";
+    this.emojis.forEach(emoji => {
+      const emojiP = document.createElement("p");
+      emojiP.innerText = emoji;
+      div.appendChild(emojiP);
+    })
   }
 }
