@@ -22,6 +22,7 @@ export default class Application extends EventEmitter {
     this.emojis.forEach(emoji => {
       paragraph.textContent += emoji;
     });
+    div.appendChild(paragraph);
   }
 
   addBananas() {
